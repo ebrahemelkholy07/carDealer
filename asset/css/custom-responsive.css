@@ -1,0 +1,95 @@
+@media only screen and (min-width: 991px){
+    header .head-icon {
+        display: none;
+    }
+    header .img-head img {
+        height: 40px;
+    }
+    header .list-head {
+        float: right;
+        display: inline-block;
+    }
+    header .list-head ul {
+        list-style: none;
+        margin: 3px;
+    }
+    header .list-head ul li {
+        display: inline-block;
+        padding: 10px 0px;
+    }
+    header .list-head ul li a {
+        padding: 8px 16px;
+        border-radius: 30px;
+        color: #fff !important;
+        cursor: pointer;
+        transition: background 1s;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    header .list-head ul li a:hover {
+        background: #737373;
+        font-weight: 500;
+    }
+    header .mobile-head {
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 991px) {
+    header {
+        padding: 0;
+    }
+    header .head-icon {
+        display: inline-block;
+        float: right;
+        font-size: 24px;
+        padding: 5px 15px;
+    }
+    header .mobile-head {
+        padding:  10px
+    }
+    header .img-head img {
+        height: 40px;
+    }
+    header .list-head ul {
+        color: #fff;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+    header .list-head ul li {
+        padding: 5px 15px;
+        transition: background 1s;
+    }
+     header .list-head ul li a{
+        color: #fff
+        text-transform: capitalize;
+    }   
+    header .list-head ul li:hover {
+        padding: 5px 15px;
+        background: rgba(0, 0, 0, .5);
+    }
+
+}
+@media only screen and (max-width: 767px) {
+    .carousel-caption h3 {
+        font-size: 30px;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+        color: #fff;
+    }
+    .search .search-girl {
+        display: none
+        }
+}
+@media only screen and (max-width: 479px) {
+    .carousel-caption h3 {
+        font-size: 25px;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 360px) {
+}

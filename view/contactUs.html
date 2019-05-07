@@ -1,0 +1,211 @@
+<style type="text/css">
+	.contact {
+		    margin: 50px 0px;
+	}
+	.contain {
+		padding: 20px;
+    	background: #ececec;
+    	transition: background 1s;
+	}
+	.contain p {
+		color: #999999;
+		transition: color 1s;
+	}
+	.contain h5{
+		transition: color 1s;
+	}
+	.contain i{
+		color: #db2d2e;
+    	font-size: 20px;
+    	margin: 15px 0;
+		transition: color 1s;
+
+	}
+	.contain:hover {
+    	background: #db2d2e;
+	}
+	.contain:hover i,.contain:hover h5,.contain:hover p {
+    	color: #fff;
+	}
+	.form-control {
+	    width: 100%;
+	    background: #f6f6f6;
+	}
+	.btn-comment {
+	    width: 100%;
+	    background: #db2d2e;
+	    color: #fff;
+	    border: 1px solid #db2d2e;
+	    padding: 5px 0;
+	    font-size: 25px;
+	    display: inline-block;
+	    position: relative;
+	    transform: perspective(1px) translateZ(0);
+	    transition-duration: 2s;
+	}
+	.btn-comment:before {
+	    content: "";
+	    position: absolute;
+	    z-index: -1;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background: #323232;
+	    transform: scaley(0);
+	    transform-origin: 0 100%;
+	    transition-duration: .5s;
+	}
+	.btn-comment:hover:before {
+	    transform: scaley(1);
+	}
+	.working-hour {
+		background: #ececec;
+   		padding: 20px;
+    	margin: 31px 0px;
+   		border-radius: 10px;
+	}
+	.working-hour h3{
+		position: relative;
+   		padding-bottom: 10px;
+    	margin-bottom: 20px;
+        font-size: 25px;
+	}
+	.working-hour h3:before {
+		position: absolute;
+	    content: "";
+	    width: 40px;
+	    height: 2px;
+	    background: #db2d2e;
+	    left: 0;
+   		bottom: 0px;
+	}
+	.working-hour ul {
+	    list-style: none;
+	    padding: 0 10px;
+	}
+	.working-hour li {
+		 padding: 12px 0;
+    	font-size: 16px;
+    	border-bottom: 1px solid #e3e3e3;
+	}
+	.working-hour strong {
+		color: #363636;
+	    width: 40%;
+	    display: inline-block;
+	}
+	.working-hour span {
+	    color: #999999;
+	    display: inline-block;
+	}
+
+</style>
+<section>
+	<div class="contact-head">
+		<div class="pageName">
+			<a ui-sref="home">Home </a><span>/</span>
+			<a ui-sref="contact" class="active">Contact Us</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="contact">
+			<div class="text-center" style="    margin-bottom: 50px;">
+				<h5>We’d Love to Hear From You</h5>
+				<h2>LET'S GET IN TOUCH!</h2>
+			</div>
+			<div class="row text-center">
+				<div class="col-6 col-md-3">
+					<div class="contain">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+						<h5>Adress</h5>
+						<p>egypt Giza wembe st</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="contain">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						<h5>Phone</h5>
+						<p>01270390078</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="contain">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<h5>Email</h5>
+						<p>Ebrahemelkholy07@gmial.com</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="contain">
+						<i class="fa fa-fax" aria-hidden="true"></i>
+						<h5>Fax</h5>
+						<p>(012)-55-547845</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="formContact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div ng-show="messageSuccess" class="alert alert-success">Thank you for contacting us, We will contact you as soon as possible</div>
+					<form name="formSupport">
+						<div class="row">
+							<div class="col-md-4">
+				                <div class="form-group">
+				                    <label>Name *</label>
+				                    <input type="text" name="name" ng-model="user.name" class="form-control" placeholder="Enter Your Name" required>
+				                    <span class="required" ng-show="formSupport.name.$invalid && formSupportInvalid">This faild is required *</span>
+				                </div>
+				            </div>
+				            <div class="col-md-4">
+				                <div class="form-group">
+				                    <label>Email *</label>
+				                    <input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Enter Your Email" required>
+				                    <span class="required" ng-show="formSupport.email.$error.required && formSupportInvalid">This faild is required *</span>
+									<span class="required" ng-show="formSupport.email.$error.email && formSupportInvalid">Invalid email address.</span>	
+				                </div>
+				            </div>
+				            <div class="col-md-4">
+				                <div class="form-group">
+				                    <label>Telephone *</label>
+				                    <input type="text" name="telephone" ng-model="user.telephone" class="form-control" placeholder="Enter your Telephone" required>
+				                    <span class="required" ng-show="formSupport.name.$invalid && formSupportInvalid">This faild is required *</span>
+				                </div>
+				            </div>
+				            <div class="col-md-12">
+				                <div class="form-group">
+				                    <label>your question *</label>
+				                    <textarea type="text" name="comment" rows="5" ng-model="user.comment" class="form-control" placeholder="Enter your Comment" required></textarea>
+				                    <span class="required" ng-show="formSupport.name.$invalid && formSupportInvalid">This faild is required *</span>
+				                </div>
+				            </div>
+				            <div class="col-md-12">
+				                <div class="form-group">
+				                    <button class="btn btn-comment" ng-click="empty()">Send Your message</button>
+				                </div>
+				            </div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<div class="working-hour">
+						<div>
+							<h3>OPENING HOURS</h3>
+							<ul>
+								<li><strong>Sunday</strong><span style="color: #db2d2e">closed</span></li>
+								<li><strong>Monday</strong><span>9:00 AM to 9:00 PM</span></li>
+								<li><strong>Tuesday</strong><span>9:00 AM to 9:00 PM</span></li>
+								<li><strong>Wednesday</strong><span>9:00 AM to 9:00 PM</span></li>
+								<li><strong>Thursday</strong><span>9:00 AM to 9:00 PM</span></li>
+								<li><strong>Friday</strong><span>9:00 AM to 9:00 PM</span></li>
+								<li><strong>Saturday</strong><span>9:00 AM to 9:00 PM</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,40 @@
+<div class="life-chat" ng-hide="formaChat" ng-click="formaChat = true"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+<div class="life-chat" ng-hide="! formaChat" ng-click="formaChat = false"><i class="fa fa-times" aria-hidden="true"></i></div>
+<div class="chat" ng-show="formaChat">
+	<div class="contain-form">
+		<div class="head-chat">
+			<h5 style="margin: 0">Leave a message</h5>
+			<span class="close-chat" ng-click="formaChat = false"><i class="fa fa-times" aria-hidden="true"></i></span>
+		</div>
+		<p>Leave a message and we will come back to you shortly. Please provide as many details as possible along with your contact information.</p>
+		<form>
+			<div class="row">
+				<div class="col-md-12">
+	                <div class="form-group">
+	                    <input type="text" name="name" class="form-control" ng-model="user.name" placeholder="Name">
+	                </div>
+	            </div>
+	            <div class="col-md-12">
+	                <div class="form-group">
+	                    <input type="email" name="Email" class="form-control" ng-model="user.email" placeholder="Email">
+	                </div>
+	            </div>
+	            <div class="col-md-12">
+	                <div class="form-group">
+	                    <input type="text" name="Telephone" class="form-control" ng-model="user.telephone" placeholder="Telephone">
+	                </div>
+	            </div>
+	            <div class="col-md-12">
+	                <div class="form-group">
+	                    <textarea type="text" name="comment" class="form-control" ng-model="user.comment" placeholder="Message"></textarea>
+	                </div>
+	            </div>
+	            <div class="col-md-12">
+	                <div class="form-group">
+	                    <button class="btn btn-comment" ng-click="empty()">Leave a message</button>
+	                </div>
+	            </div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="carDealer">
+<head>
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Car Dealer</title>
+	<link rel="stylesheet" type="text/css" href="asset/js/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="asset/js/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/custom-responsive.css">
+	<link rel="shortcut icon" type="image/png" href="asset/img/fav.png"/>
+
+</head>
+<body>
+	<!-- BEGIN Header -->
+	<div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController"></div>
+	<!-- END Header -->
+	<div ui-view></div>
+	<div data-ng-include="'tpl/life-chat.html'" data-ng-controller="FooterController"></div>
+	<!-- BEGIN FOOTER -->
+	<div data-ng-include="'tpl/footer.html'" data-ng-controller="FooterController"></div>
+	<!-- END FOOTER -->
+	
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCCFXjLt0IYwnc9aLh_RnkKFtKmON2cTNY",
+	    authDomain: "cardealer-4bc05.firebaseapp.com",
+	    databaseURL: "https://cardealer-4bc05.firebaseio.com",
+	    projectId: "cardealer-4bc05",
+	    storageBucket: "cardealer-4bc05.appspot.com",
+	    messagingSenderId: "681925373397"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="asset/js/jquery.js"></script>
+	<script src="asset/js/popper.js"></script>
+	<script src="asset/js/bootstrap/dist/js/bootstrap.js"></script>
+		<!-- angular -->
+	<script src="asset/js/angular-1.4.7/angular.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="asset/js/angular-ui-router.min.js"></script>
+	<script src="asset/js/ocLazyLoad.min.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers/headerController.js" type="text/javascript"></script>
+	<script src="js/controllers/footerController.js" type="text/javascript"></script>
+
+</body>
+</html>
