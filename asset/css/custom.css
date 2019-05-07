@@ -113,8 +113,8 @@ header {
     font-weight: 500;
     padding: 10px 30px;
     position: relative;
-    transform: perspective(1px) translateZ(0);
-    transition-duration: 0.3s;
+    /*transform: perspective(1px) translateZ(0);*/
+    /*transition-duration: 0.3s;*/
     border-radius: 2px;
 }
 .search .btn-search:before {
